@@ -1,8 +1,21 @@
-import { readFile, writeFile } from "fs/promises";
+import fs from "fs";
 
-async function copiar(entrada, salida) {
-    const contenido = await readFile(entrada, "utf8");
-    await writeFile(salida, contenido);
+function copiar(entrada, salida) {
+    fs.readFile(entrada, "utf8", (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log("contenido:", data);
+        fs.writeFile(salida, data, (err) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+
+            console.log("Archivo copiado correctamente");
+        });
+    });
 }
 
 export default copiar;

@@ -31,3 +31,24 @@ console.log("EJ04______________________________________________________________"
 
 import copiar from './EJ04.js';
 copiar("./entrada.txt", "./salida.txt");
+
+
+console.log("EJ05______________________________________________________________");
+
+import parsearUrl from "./EJ05.js";
+
+let objeto5 = parsearUrl("http://www.ort.edu.ar:8080/alumnos/index.htm?curso=2022&mes=mayo");
+
+console.log(objeto5);
+
+console.log("EJ06______________________________________________________________");
+
+let objeto6 = parsearUrl("url_mal_formada");
+
+console.log(objeto6);
+
+console.log("EJ07______________________________________________________________");
+
+import obtenerMoneda from "./EJ07.js";
+const moneda = obtenerMoneda("Argentina");
+console.log(moneda);
