@@ -1,12 +1,8 @@
-import {countries, currencies} from "country-data";
+import countryToCurrency from "country-to-currency";
 
 function obtenerMoneda(pais) {
-    const paisEncontrado = countries[pais]
-
-    if (paisEncontrado) {
-        const monedaEncontrada = currencies[paisEncontrado.currency];
-        return monedaEncontrada;
-    }
+    return countryToCurrency[pais];
 }
 
 export default obtenerMoneda;
+

@@ -50,5 +50,5 @@ console.log(objeto6);
 console.log("EJ07______________________________________________________________");
 
 import obtenerMoneda from "./EJ07.js";
-const moneda = obtenerMoneda("Argentina");
+const moneda = obtenerMoneda("AR");
 console.log(moneda);
